@@ -3,3 +3,39 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin top {
+  top: 0;
+}
+
+@mixin  width ($max-width) {
+  max-width: $max-width;
+}
+
+@mixin border ($top, $left, $right, $bottom ) {
+  border-top: $top;
+  border-left: $left;
+  border-right: $right;
+  border-bottom: $bottom;
+}
+
+@mixin left-right ($right, $left) {
+  right: $right;
+  left: $left;
+}
+
+@mixin margin ($margin) {
+  margin: $margin;
+}
+
+@mixin padding ($padding) {
+  padding: $padding;
+}
+
+@mixin display ($display) {
+  display: $display;
+}
+
+@mixin text-align ($text-align) {
+  text-align: $text-align;
+}

@@ -1,0 +1,70 @@
+.chats {
+    background-color: rgb(13, 148, 148);
+    background-image: url(./../../img/bg.img.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include width (600px);
+    height: 600px;
+    @include margin (100px auto);
+    // margin: 100 auto;
+    position: relative;
+    @include display (flex);
+    // display: flex;
+
+    &__flow {
+        @include display (flex);
+        // display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include padding (0);
+        @include padding (0 0 24px 24px);
+        // padding-left: 24px;
+        // padding-bottom: 24px;
+    }
+
+    .chat {
+        position: relative;
+        background-color: #ffffff;
+        color: #000000;
+        @include padding (12px);
+        // padding: 12px;
+        @include margin (4px 0);
+        // margin-top: 4px;
+        // margin-bottom: 4px;
+        @include width (80%);
+        min-width: 200px;
+        border-radius: 4px;
+        z-index: 100;
+        @include text-align (left);
+        // text-align: left;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 0;
+            @include display (block);
+            // display: block;
+            @include border (12px solid #ffffff, 12px solid transparent , 12px solid transparent ,12px solid transparent);
+        }
+    }
+
+    &--right {
+        @include text-align (right);
+        // text-align: right;
+        align-self: flex-end;
+
+        &::before {
+            // right: -10px;
+            @include left-right (-10px ,0);
+            @include top;
+        }
+    }
+
+    &--left {
+        &::before {
+            // left: -10px;
+            @include left-right (0,-10px);
+            @include top;
+        }
+    }
+}
